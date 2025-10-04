@@ -1,74 +1,130 @@
-# React + TypeScript + Vite
+# Modern Resume Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A feature-rich, modern resume builder application built with React and TypeScript. Create, customize, and download professional resumes with an intuitive interface and real-time preview.
 
-Currently, two official plugins are available:
+![Resume Builder Screenshot](https://via.placeholder.com/1200x600/1a202c/ffffff?text=Resume+Builder+Screenshot)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- 📝 **Easy-to-Use Editor** - Intuitive form-based interface for entering resume information
+- 🎨 **Multiple Templates** - Choose from various professionally designed templates
+- 🔍 **ATS Optimization** - Get real-time feedback on how well your resume matches job descriptions
+- 🎯 **AI-Powered Suggestions** - Get AI-generated content improvements and recommendations
+- 📱 **Responsive Design** - Works seamlessly on desktop and mobile devices
+- 💾 **Save & Export** - Download your resume as PDF or save your progress
+- 🎨 **Customizable Styling** - Adjust colors, fonts, and layouts to match your personal brand
+- 🔄 **Real-time Preview** - See changes instantly as you edit
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+### Frontend
+- **React 18** - Frontend library for building user interfaces
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Next Generation Frontend Tooling
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Hook Form** - Form state management and validation
+- **React PDF** - PDF generation and rendering
+- **Framer Motion** - Animation library for React
+- **Lottie** - Lightweight animation library
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### State Management
+- **React Context API** - For global state management
+- **React Query** - Data fetching and caching
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### AI & APIs
+- **Gemini API** - AI-powered content generation and optimization
+- **PDF.js** - PDF parsing and analysis
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Development Tools
+- **ESLint** - JavaScript/TypeScript linter
+- **Prettier** - Code formatter
+- **Husky** - Git hooks
+- **Commitlint** - Lint commit messages
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or later)
+- npm or yarn
+- Git
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/AbhinavMalviya58/resume-builder.git
+   cd resume-builder
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Create a `.env` file in the root directory and add your API keys:
+   ```env
+   VITE_GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
+
+## 📁 Project Structure
+
+```
+src/
+├── components/           # Reusable UI components
+│   ├── forms/           # Form components for resume sections
+│   ├── templates/       # Resume template components
+│   └── ...
+├── contexts/            # React context providers
+├── services/            # API and service layer
+├── types/               # TypeScript type definitions
+├── utils/               # Utility functions
+├── animations/          # Lottie animation files
+└── App.tsx              # Main application component
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧪 Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint
+- `npm run format` - Format code with Prettier
+- `npm run type-check` - Check TypeScript types
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# resume-builder
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgements
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Google Gemini](https://ai.google/)
+- [PDF.js](https://mozilla.github.io/pdf.js/)
+
+---
+
+Made with ❤️ by [Your Name](https://github.com/yourusername)
